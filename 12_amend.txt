@@ -1,0 +1,4 @@
+# Amending: commit current changes to last commit
+git commit --amend
+git commit --amend -m "message"
+git commit --amend --no-edit
