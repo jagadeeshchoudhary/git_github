@@ -1,0 +1,32 @@
+# view commits
+git log
+
+# single line format
+git log --oneline
+
+# filter
+git log HEAD~6..HEAD~2
+git log --since=2024-12-01
+git log --until=2024-12-03
+git log --until="3 days ago"
+git log --after=2.weeks --before=3.days
+git log -n 3
+git log -3
+git log --author="Jessie"
+git log --grep="bug"
+git log -E --grep="b.+b"
+
+# format
+git log --format=shot
+(shot, oneline, medium, full, fuller, email, raw)
+git log -p
+git log --stat
+git log --graph
+
+
+git log --graph --all --oneline --decorate
+
+
+# Show a log of changes to the local repository’s HEAD.
+# Add --relative-date flag to show date info or --all to show all refs.
+git reflog
