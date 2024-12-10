@@ -2,9 +2,9 @@
 # Shows which files would be removed from working directory.
 # Use the -f flag in place of the -n flag to execute the clean.
 
-# dry run
+# dry run: Lists the untracked files and directories that would be removed.
 git clean -n
-# directory
+# directory: Include untracked directories
 git clean -d
 # forceful
 git clean -f

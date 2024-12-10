@@ -1,0 +1,23 @@
+# reset: The git reset command is used to undo changes by altering the 
+# state of your staging area, working directory, or commit history. 
+# Its scope depends on the options used (--soft, --mixed, or --hard).
+
+# Remove <file> from the staging area, but leave the working directory unchanged.
+
+# Unstage a specific file without changing its content
+git reset <file>
+
+
+# Reset to a specific commit
+# git reset is useful when we want to undo commits that have not been pushed to a remote repository.
+# Moves the HEAD pointer to the specified commit.
+# By default, it leaves changes in the working directory (equivalent to --mixed)
+git reset <commit-sha>
+* don't use
+git reset --soft commit-sha   (same as above)
+
+# Moves the HEAD to the specified commit.
+# Discards all changes in the staging area and working directory.
+# Warning: This is irreversible and should be used with extreme caution.
+git reset --hard commit-sha
+** very danger

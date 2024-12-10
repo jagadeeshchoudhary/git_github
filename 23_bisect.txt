@@ -1,7 +1,27 @@
 bisect: find the commit that introduced a change or bug
-# start
+
+# Start Bisecting: Start a bisect session to find the bad commit
 git bisect start
+
+# Mark a Known Good Commit: Mark a commit where everything was working correctly 
+# (a known good commit). This could be a commit hash (<sha>)
+# if the current commit is good, you can also use "git bisect good" to mark it as good.
 git bisect good <sha>
+
+# Mark a Known Bad Commit: Mark a commit where the issue 
+# (bug or unwanted change) occurred (a known bad commit).
 git bisect bad <sha>
-# reset / exit
+
+# Continue Bisecting: After marking a good and a bad commit, 
+# Git will automatically checkout a commit in between the two points. 
+# You can then test this commit to see if the issue is present.
+
+# If the issue is still there, mark it as bad
+git bisect bad
+
+# If the issue is not there, mark it as good
+git bisect good
+
+# Exit the Bisect Session: Once you've found the bad commit, you can reset the bisect session.
+# This will return you to your original branch and stop the bisect process.
 git bisect reset

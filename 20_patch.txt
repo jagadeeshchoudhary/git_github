@@ -1,5 +1,8 @@
 # patch
+
+# choose which parts of a file to stage (useful for selective staging)
 git add -p
+
 git stash -p
 git restore -p
 git reset -p
@@ -12,17 +15,20 @@ git cherry-pick <sha>..<sha>
 
 
 # diff patch
-# create
+# Create a patch for a range of commits
 git diff start-sha end-sha > output.diff
 
-# apply
+# apply patch
 git apply output.diff
 
 
 # formated-patch
+git format-patch <start-sha>..<end-sha> -o ../recent_commits
 git format-patch origin/main..main -o ../recent_commits
+
+git format-patch <start-sha>..<end-sha> --stdout > <output-file>
 git format-patch origin/main..main --stdout > ../recent_commits.patch
 
-# apply
+# apply patch
 git am feature/0001-name.patch
 git am feature/*.patch

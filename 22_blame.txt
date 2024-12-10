@@ -1,10 +1,28 @@
 # blame: track down bugs
+
+# Track who last modified each line of a file
 git blame file
+
+# View the commit hash and line changes in a more readable format
 git blame -h
+
+# Ignore whitespace changes while blaming
 git blame -w file (ingrone white spaces)
+
+# Use a short date format for commit dates
 git blame --date=short file (short date format)
+
+# Show a more concise author and date format
 git blame -s file (short author and date)
+
+# Color the lines to make the blame output more visually distinct
 git blame --color-lines file
+
+# Blame a specific range of lines in the file
 git blame -L 100, 125 file (line between 100 aned 125)
+
+# Blame starting from line 100 and including the next 25 lines
 git blame -L 100,+25 file
+
+# Blame a file at a specific commit
 git blame <sha> file

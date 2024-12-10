@@ -1,4 +1,0 @@
-# Revert a commit:
-# Create new commit that undoes all of the changes made in <commit>, 
-# then apply it to the current commit.
-git revert <commit-sha>

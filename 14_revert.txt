@@ -1,0 +1,12 @@
+# Revert a commit: The git revert command creates a new commit that undoes 
+# the changes made by a specified commit. 
+# Unlike git reset, it does not alter commit history, 
+# making it safe for shared repositories.
+
+# Create new commit that undoes all of the changes made in <commit>, 
+# then apply it to the current commit.
+git revert <commit-sha>
+
+# <commit-sha>: The hash of the commit you want to revert.
+# Creates a new commit that undoes the changes introduced by the specified commit.
+# Applies the revert to the current branch.

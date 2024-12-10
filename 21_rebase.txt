@@ -5,26 +5,33 @@
 git rebase <base>
 git rebase main
 
+
+# Rebase interactively from a specific commit or branch
 git rebase --intractive branch/commit
 git rebase -i HEAD~#
+
+# Rebase interactively from the root (useful for editing the entire history of a branch)
 git rebase -i --root
 
 
 # rebase
+# Rebase the current branch onto another branch
 git rebase <upstream> <branch>
+git rebase main feature_branch
 
 
 # rebase to new-branch
+# Rebase the current branch onto a new base branch
 git rebase --onto <new-base> <upstream> <branch>
-
 git rebase main new_feature
 # or
 git switch new_feature
 git rebase main
 
 
-# undo
-git rebase --onto=sha main new_feature
+# undo: Undo a rebase by moving the base back to a specific commit
+git rebase --onto=sha <old-base> <branch>
+git rebase --onto=abc123 main feature_branch
 
 
 # intractive
@@ -37,6 +44,13 @@ git rebase -i Head~3
 
 
 # rebase with pull
+
+# Pull with rebase (instead of merge)
+# This pulls the changes from the upstream branch and rebases them on top of local branch.
 git pull -r
+
+# Pull with rebase and preserve the merge commits
 git pull --rebase=preserve
+
+# Pull with interactive rebase
 git pull --rebase=intractive

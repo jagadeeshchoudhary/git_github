@@ -5,7 +5,7 @@ git tag <name> <commit-sha>
 # Create a tag object named v1 for current commit.
 git tag v1 <commit-sha>
 
-# tag with message
+# Create an annotated tag (a tag with a message and metadata)
 git tag -a <name> <commit-sha>
 git tag -am "message" <name> <commit-sha>
 
@@ -16,7 +16,11 @@ git tag -d <name>
 # list all tags
 git tag
 git tag -l
+
+# List tags matching a specific pattern
 git tag -l "v2*"
+
+# List tags along with their descriptions (if available)
 git tag -n
 
 
@@ -29,15 +33,17 @@ git diff tag_1 tag_2
 git switch tag_1
 
 # can create branch from a tag
-git switch -c branch tag_1
+git switch -c <branch-name> tag_1
 
 
 
 # push tag to remote
+git push origin <tag-name>
 git push origin tag_1
 
 # push all the tags
 git push --tags
 
 # remove
+git push -d origin <tag-name>
 git push -d origin tag_2

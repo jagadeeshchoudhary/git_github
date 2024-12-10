@@ -20,6 +20,7 @@ git remote -v
 
 
 # show
+git remote show <name>
 git remote show origin
 
 
@@ -33,10 +34,13 @@ git branch -a
 
 
 # create branch
-git branch <name> <source>
+git branch <branch-name> <source>
 git branch feature main
+
+# create new branch from remote branch
+git branch <branch-name> <remote>/<branch>
 git branch feature origin/main
-git switch -c <name> <source>
+git switch -c <branch-name> <source>
 
 
 # Git push: Push the branch to <remote>, along with necessary commits and objects.
@@ -45,6 +49,7 @@ git push <remote> <branch>
 git push -u origin main
 git push -u origin feature
 (-u: to setup upstream required for the 1st push, origin: remote_name, main: branch_name)
+# push all branches to the remote
 git push --all
 
 # connect branches manually
@@ -56,7 +61,7 @@ git push origin main:main
 git push
 
 # delete
-git push -d <remote> <remote-branch>
+git push -d <remote-name> <remote-branch>
 git push -d origin feature
 
 
@@ -65,7 +70,7 @@ git push -d origin feature
 git config --global push.autoSetupRemote true
 
 
-# copy reomte repo
+# copy remote repo
 # Clone repo located at <repo> onto local machine.
 # Original repo can be located on the local filesystem or on a remote machine via HTTP or SSH.
 git clone <repo>
@@ -80,6 +85,7 @@ git fetch <remote> <branch>
 git fetch origin main
 
 # merge
+git merge origin/<branch>
 git merge origin/main
 
 
@@ -89,6 +95,9 @@ git pull <remote>
 
 
 # prune: delete stale branches that no longer exists on remote
+git remote prune <remote-name>
 git remote prune origin
 git remote prune origin --dry-run
+
+# Fetch and prune in a single command
 git fetch --prune

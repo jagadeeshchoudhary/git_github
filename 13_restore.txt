@@ -1,0 +1,25 @@
+The git restore command allows you to discard changes in your working directory 
+or staging area, reverting files to their last committed state.
+
+# Restoring Files in the Working Directory
+# Reverts the specified file to its last committed state.
+git restore file_name
+git restore .
+
+
+# Restoring Files in the Staging Area
+# Removes specified file from staging area without discarding changes in working directory.
+git restore --staged file_name
+git restore --staged .
+
+
+# Restoring Files to a Specific Commit
+# Restore a file to the state it was in at a specific commit
+git restore filename --source=<sha>
+
+
+# git restore vs git reset:
+# While git restore is used for discarding changes in the working directory or staging area,
+# git reset modifies branch history and HEAD.
+
+# Precaution: Always double-check the changes before using git restore as it cannot be undone.

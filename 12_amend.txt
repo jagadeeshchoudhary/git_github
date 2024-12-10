@@ -1,4 +1,11 @@
-# Amending: commit current changes to last commit
+# Amending: The git commit --amend command allows you to modify the most recent commit. 
+# This is useful for adding forgotten changes, correcting commit messages, or making small adjustments.
+
+# Amend the last commit with current staged changes
 git commit --amend
+
+# Amend the last commit and provide a new commit message inline
 git commit --amend -m "message"
+
+# Amend the last commit without changing the commit message
 git commit --amend --no-edit
