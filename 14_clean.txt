@@ -1,0 +1,10 @@
+# clean
+# Shows which files would be removed from working directory.
+# Use the -f flag in place of the -n flag to execute the clean.
+
+# dry run
+git clean -n
+# directory
+git clean -d
+# forceful
+git clean -f
