@@ -1,0 +1,7 @@
+bisect: find the commit that introduced a change or bug
+# start
+git bisect start
+git bisect good <sha>
+git bisect bad <sha>
+# reset / exit
+git bisect reset
