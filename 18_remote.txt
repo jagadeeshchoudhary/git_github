@@ -1,0 +1,94 @@
+# Remotes
+# Create a new connection to a remote repo.
+# After adding a remote, you can use <name> as a shortcut for <url> in other commands.
+git remote add <name> <url>
+git remote add origin https://github.com/jagadeeshchoudhary/git_github.git
+
+
+# remove reomte
+git remote remove name
+git remote rm name
+
+
+# rename remote
+git rename old_name new_name
+
+
+# list remotes
+git remote
+git remote -v
+
+
+# show
+git remote show origin
+
+
+# branches
+# list local branches
+git branch
+# list remote branches
+git branch -r
+# list all branches
+git branch -a
+
+
+# create branch
+git branch <name> <source>
+git branch feature main
+git branch feature origin/main
+git switch -c <name> <source>
+
+
+# Git push: Push the branch to <remote>, along with necessary commits and objects.
+# Creates named branch in the remote repo if it doesn’t exist.
+git push <remote> <branch>
+git push -u origin main
+git push -u origin feature
+(-u: to setup upstream required for the 1st push, origin: remote_name, main: branch_name)
+git push --all
+
+# connect branches manually
+git branch -u origin/remote_branch_name local_branch_name
+
+# push 
+git push <remote-name> <local-branch>:<remote-branch>
+git push origin main:main
+git push
+
+# delete
+git push -d <remote> <remote-branch>
+git push -d origin feature
+
+
+
+# setup upstream globally
+git config --global push.autoSetupRemote true
+
+
+# copy reomte repo
+# Clone repo located at <repo> onto local machine.
+# Original repo can be located on the local filesystem or on a remote machine via HTTP or SSH.
+git clone <repo>
+git clone <repo> <directory-name>
+
+
+# fetch all remote branchs to local but don't merge, 
+# add <branch> to fetch only specific branch
+git fetch
+git fetch <branch>
+git fetch <remote> <branch>
+git fetch origin main
+
+# merge
+git merge origin/main
+
+
+# get all remote branchs to local and merge (git fetch + git merge)
+git pull
+git pull <remote>
+
+
+# prune: delete stale branches that no longer exists on remote
+git remote prune origin
+git remote prune origin --dry-run
+git fetch --prune
