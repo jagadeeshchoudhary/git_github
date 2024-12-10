@@ -4,3 +4,8 @@
 
 # GitHub: GitHub is a free, online platform for software development that 
 # allows users to store, track, and collaborate on projects.
+
+
+# git help: help on the git commands
+git help
+git help <command>
