@@ -1,0 +1,27 @@
+# Config:
+# System: Applies to every user of a computer system. 
+# (Mac/linux: /etc/gitconif) (Win: Program Files\Git\etc\gitconfig)
+
+# User: These settings apply to a single user and all the projects they work on. 
+# (~/.gitconfig) ($HOME\.gitconfig)
+
+# Project: Unique to each project (my_project/.git/config)
+
+
+# System: git config --system
+# User: git config --global
+# Project: git config
+
+
+git config command
+
+git config --global user.name "Name"
+git config --global user.mail "email"
+git config --global color.ui true
+git config --global init.defaultBranch main
+git config --global core.editor "code --wait"
+
+view configs:
+git config --list
+git config user.name
+cat ~/.gitconfig
