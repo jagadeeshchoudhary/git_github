@@ -1,0 +1,42 @@
+# Rebase: Rebase the current branch onto <base>.
+# <base> can be a commit ID, branch name, a tag, or a relative reference to HEAD.
+
+# get commit from one branch and apply to another
+git rebase <base>
+git rebase main
+
+git rebase --intractive branch/commit
+git rebase -i HEAD~#
+git rebase -i --root
+
+
+# rebase
+git rebase <upstream> <branch>
+
+
+# rebase to new-branch
+git rebase --onto <new-base> <upstream> <branch>
+
+git rebase main new_feature
+# or
+git switch new_feature
+git rebase main
+
+
+# undo
+git rebase --onto=sha main new_feature
+
+
+# intractive
+git rebase -i <upstream> <branch>
+git rebase -i main new_feature
+
+
+# squash commits
+git rebase -i Head~3
+
+
+# rebase with pull
+git pull -r
+git pull --rebase=preserve
+git pull --rebase=intractive
