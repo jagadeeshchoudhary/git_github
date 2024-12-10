@@ -1,0 +1,15 @@
+# Deleting File
+git rm file_name
+
+
+# Deleting cache/staged
+git rm --cached
+git rm -r --cached .
+same as above
+git rm --staged
+git rm -r --staged .
+
+
+# Rename File and Moving file
+git mv old_file_name new_file_name
+git mv old_path/filename new_path/filename
