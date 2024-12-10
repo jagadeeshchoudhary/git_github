@@ -1,0 +1,18 @@
+# Show unstaged changes between staged index and working directory.
+git diff
+git diff --word-diff
+git diff --color-words
+
+# diff between staged index and repository
+git diff --cached
+# same as above
+git diff --staged
+
+# diff between commit a and commit b
+git diff a_sha b_sha
+
+# diff between for a specific file
+git diff a_sha b_sha --filename
+
+# summery of all changes
+git diff --stat a_sha b_sha
