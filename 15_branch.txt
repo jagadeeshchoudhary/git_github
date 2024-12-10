@@ -1,0 +1,40 @@
+# create new branch
+git branch <branch-name>
+
+# switch between branches
+git switch <branch-name>
+
+# create a new branch and switch to the branch.
+git switch -c <branch-name>
+# drop -c to switch to existing branch
+git switch <branch-name>
+
+# git checkout -b branch_name (old way)
+
+
+# Renaming a branch
+git branch -m <old-name> <new-name>
+
+
+# deleting a branch
+git branch --delete <branch-name>
+git branch -d <branch-name>
+git branch -D <branch-name>  (forceful)
+
+
+
+# merge
+merge <branch> to current branch
+git merge <branch-name>
+# show branches which are merged
+git branch --merged
+# show not merged
+git branch --no-merged
+
+# abort merge
+git merge --abort
+
+
+# List all of the branches in your repo.
+git branch
+git branch -l
