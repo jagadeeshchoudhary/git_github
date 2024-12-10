@@ -1,5 +1,4 @@
 # Git and GitHub
-
 The `git_github` project is a comprehensive guide to using Git and GitHub for version control and collaborative project management. It provides essential Git commands, workflows, best practices for collaboration, and troubleshooting techniques such as `git bisect` and `git blame`. This repository is ideal for developers and teams looking to effectively manage their codebase, collaborate efficiently, and maintain a clean version history.
 
 ## Introduction
