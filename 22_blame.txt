@@ -1,0 +1,10 @@
+# blame: track down bugs
+git blame file
+git blame -h
+git blame -w file (ingrone white spaces)
+git blame --date=short file (short date format)
+git blame -s file (short author and date)
+git blame --color-lines file
+git blame -L 100, 125 file (line between 100 aned 125)
+git blame -L 100,+25 file
+git blame <sha> file
