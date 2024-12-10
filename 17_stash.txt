@@ -1,0 +1,33 @@
+# stash
+# keep changes in temporary stack
+
+# push changes to temporary stack
+git stash
+git stash push
+git stash push -m "message"
+
+
+# display all the temp changes in stack
+git stash list
+
+
+# see the chnage in stack
+git stash show <stash_number>  (ex: git stash show 0)
+git stash show -p <stash_number>
+git stash show -p --color-words <stash_number>
+
+
+# apply change but change is still there in the stash.
+git stash apply <stash_number>
+
+
+# Apply stored stash content into working directory, and clear stash.
+git stash pop
+git stash pop <stash_number>
+
+
+# Delete a specific stash from all your previous stashes.
+git stash drop
+git stash drop <stash_number>
+# delete all
+git stash clear
