@@ -1,0 +1,28 @@
+# patch
+git add -p
+git stash -p
+git restore -p
+git reset -p
+git commit -p
+
+
+# cherry-picking changes
+git cherry-pick <sha>
+git cherry-pick <sha>..<sha>
+
+
+# diff patch
+# create
+git diff start-sha end-sha > output.diff
+
+# apply
+git apply output.diff
+
+
+# formated-patch
+git format-patch origin/main..main -o ../recent_commits
+git format-patch origin/main..main --stdout > ../recent_commits.patch
+
+# apply
+git am feature/0001-name.patch
+git am feature/*.patch
