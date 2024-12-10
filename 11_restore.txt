@@ -1,0 +1,12 @@
+# Restore Files
+git restore file_name
+git restore .
+
+
+# if the file in staged area
+git restore --staged file_name
+git restore --staged .
+
+
+# restore after specific commit
+git restore filename --source=<sha>
