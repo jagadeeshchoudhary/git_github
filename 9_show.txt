@@ -1,0 +1,10 @@
+# view commit contents
+git show commit_id
+git show 1st_8char_of_commit_id
+
+# stat
+git show --stat
+
+# parent
+git show HEAD~1
+git show --oneline HEAD~6..HEAD~2
