@@ -1,0 +1,43 @@
+# Create a tag reference named v1 for current commit. 
+# Add commit sha to tag a specific commit instead of current one.
+git tag <name> <commit-sha>
+
+# Create a tag object named v1 for current commit.
+git tag v1 <commit-sha>
+
+# tag with message
+git tag -a <name> <commit-sha>
+git tag -am "message" <name> <commit-sha>
+
+# Remove a tag from local repository.
+git tag -d <name>
+
+
+# list all tags
+git tag
+git tag -l
+git tag -l "v2*"
+git tag -n
+
+
+# show and diff
+git show tag_1 tag_2
+git diff tag_1 tag_2
+
+
+# error
+git switch tag_1
+
+# can create branch from a tag
+git switch -c branch tag_1
+
+
+
+# push tag to remote
+git push origin tag_1
+
+# push all the tags
+git push --tags
+
+# remove
+git push -d origin tag_2
