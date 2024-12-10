@@ -1,0 +1,18 @@
+# Staging Files
+git add file_name
+
+# For the all the files
+git add --all
+git add -a
+git add .
+
+
+# Commit Files (without -m will launch text editor for message)
+git commit
+
+# commit with message
+git commit -m "message"
+
+# combine add and commit
+git commit -a 
+git commit -am "message"
