@@ -1,0 +1,12 @@
+# ignore files
+
+# files inside .gitignore file will be ingnored
+# write file_names/folder_name/regular_expression in .gitignore file
+
+
+# keep empty forlder
+# by defalut git ingores empty folders,
+# to keep empty forlders create a file named .gitkeep inside empty folder.
+
+# global level ignore
+git config --global core.excludeFile ~/.gitignore_global
