@@ -6,6 +6,12 @@
 # allows users to store, track, and collaborate on projects.
 
 
+# Git Environments
+# Working: Files before moving to Staging area, when files are created in a folder.
+# Staging Index: move to Staging with "git add" command.
+# Repository: commit changes with "git commit".
+
+
 # git help: help on the git commands
 git help
 git help <command>
